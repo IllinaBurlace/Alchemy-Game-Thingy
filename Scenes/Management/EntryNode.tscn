@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3uod14gv6ycs"]
+
+[ext_resource type="Script" uid="uid://bnomlgqchd5qo" path="res://Scenes/Management/EntryNode.cs" id="1_p0fx5"]
+
+[node name="EntryNode" type="Node2D" groups=["EntryNode"]]
+script = ExtResource("1_p0fx5")

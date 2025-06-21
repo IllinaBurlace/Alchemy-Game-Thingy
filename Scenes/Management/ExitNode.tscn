@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf5kl0hs5ntpd"]
+
+[ext_resource type="Script" uid="uid://b22a6jluvg8oq" path="res://Scenes/Management/ExitNode.cs" id="1_tvsew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgm0p"]
+
+[node name="ExitNode" type="Area2D"]
+script = ExtResource("1_tvsew")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hgm0p")
+
+[connection signal="body_entered" from="." to="." method="OnCollision"]

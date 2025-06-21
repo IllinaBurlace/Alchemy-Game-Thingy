@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cukuiah2ecsmk"]
+
+[ext_resource type="Script" uid="uid://bglnbkcnrulgu" path="res://Scenes/Entities/Lunei/Lunei.cs" id="1_sylox"]
+[ext_resource type="SpriteFrames" uid="uid://ddh0varu3fgkb" path="res://Assets/Entities/Lunei/SpriteSheet.tres" id="2_620ww"]
+[ext_resource type="Script" uid="uid://d3qe63ti6cug4" path="res://Scenes/Entities/Lunei/AnimationController.cs" id="3_bpa26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7nhm"]
+size = Vector2(40, 7)
+
+[node name="Lunei" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_sylox")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.25, 1.25)
+sprite_frames = ExtResource("2_620ww")
+animation = &"move_right"
+script = ExtResource("3_bpa26")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 36.5)
+shape = SubResource("RectangleShape2D_g7nhm")
